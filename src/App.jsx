@@ -11,7 +11,7 @@ import RestaurantSection from "./Components/ServiceSection/RestaurantSection";
 const App = () => {
 
   return (
-    <div className="">
+    <div>
         <NavigationSection />
         <HeroSection/>
         <RestaurantSection/>

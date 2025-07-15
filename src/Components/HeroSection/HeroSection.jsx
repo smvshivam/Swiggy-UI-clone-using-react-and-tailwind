@@ -1,4 +1,3 @@
-import React from "react";
 import {
   LEFT_SIDE_PICTURE,
   RIGHT_SIDE_PICTURE,
@@ -7,23 +6,23 @@ import {
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col items-center justify-center pt-16 pb-8 bg-saffron ">
-      {/* LEFT SIDE IMAGE */}
-      <div className="h-[450px] w-[250px] absolute left-0 top-[92px]  ">
-        <img src={LEFT_SIDE_PICTURE} />
-      </div>
-
-      {/* MIDDLE SECTION */}
-      <div>
-        {/* DESCRIPTION SECTION */}
-        <div className="mx-96 pr-10 my-5 text-5xl text-white text-center font-bold ">
+    <div className="bg-saffron relative ">
+      {/* HERO SECTION BODY */}
+      <div className="w-4/5 mx-auto pt-16  flex flex-col ">
+        {/* LEFT IMAGE */}
+        <img
+          src={LEFT_SIDE_PICTURE}
+          className="lg:h-[450px] lg:w-[250px] md:h-[350px] md:w-[180px] absolute left-0 top-0"
+        />
+        {/* HEADING  */}
+        <div className=" md:w-3/5 mx-auto font-bold  xl:text-5xl lg:text-4xl md:text-3xl text-white text-center">
           Order food. Discover best restaurants. Swiggy it!
         </div>
-
-        {/* SEARCH SECTION */}
-        <div className="flex justify-center items-center gap-4 ml-44 mr-60 my-9 ">
-          <div className="flex items-center gap-3 rounded-xl  py-4 px-6  bg-white ">
-            <div>
+        {/* INPUT BUTTON */}
+        <div className="mx-auto mt-6 flex xl:flex-row md:flex-col gap-4  ">
+          {/* LEFT SIDE BUTTON */}
+          <div className="flex items-center xl:gap-3 justify-between px-4 py-4  rounded-2xl bg-white">
+            <div className="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -39,14 +38,12 @@ const HeroSection = () => {
                 ></path>
               </svg>
             </div>
-            <div>
-              <input
-                type="text"
-                maxLength={30}
-                placeholder="Enter your delivery location"
-                className="w-full caret-orange-500 text-ellipsis font-medium  text-black-soft outline-none"
-              />
-            </div>
+            <input
+              type="text"
+              placeholder="Enter your delivery location"
+              maxLength={30}
+              className="outline-none caret-saffron font-medium xl:w-52 md:w-64"
+            />
             <div>
               <svg
                 width="20"
@@ -68,43 +65,39 @@ const HeroSection = () => {
               </svg>
             </div>
           </div>
-
-          <div>
-            <button className="flex items-center bg-white p-3 rounded-xl">
-              <div className="pr-40 font-medium text-lg text-black-soft">
-                Search for restaurant, item or more
-              </div>
-              <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  x="0px"
-                  y="0px"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 30 30"
-                >
-                  <path d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z"></path>
-                </svg>
-              </div>
+          {/* RIGHT SIDE BUTTON */}
+          <div className="flex items-center rounded-2xl px-4 py-4  bg-white">
+            <button className="xl:pr-36  md:pr-16  font-semibold text-lg text-black-soft">
+              Search for restaurant, item or more
             </button>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="24"
+                height="24"
+                viewBox="0 0 30 30"
+              >
+                <path d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z"></path>
+              </svg>
+            </div>
           </div>
         </div>
-      </div>
+        {/* RIGHT IMAGE */}
+        <img
+          src={RIGHT_SIDE_PICTURE}
+          className="lg:h-[450px] lg:w-[250px] md:h-[350px] md:w-[180px] absolute right-0 top-0"
+        />
 
-      {/* RIGHT SIDE IMAGE */}
-      <div className="h-[450px] w-[250px] absolute right-0 top-[92px] ">
-        <img src={RIGHT_SIDE_PICTURE} />
-      </div>
-
-      {/* SERVICE IMAGE */}
-      <div className="flex mx-44">
-        {SERVICE_LINK.map((i) => (
-          <div>
-            <a href="#">
+        {/* CARDS */}
+        <div className="mx-auto mt-8 overflow-x-scroll flex">
+          {SERVICE_LINK.map((i) => (
+            <a href="">
               <img src={i.service} />
             </a>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

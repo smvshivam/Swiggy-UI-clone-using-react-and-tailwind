@@ -29,5 +29,4 @@ export const SERVICE_LINK = [
         service:IMAGES_URL+DINEOUT,
         link:"/dineout"
     }
-]
-
+]           

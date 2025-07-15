@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import {
   items1,
   items2,
@@ -9,24 +9,27 @@ const RestaurantSection = () => {
   const [isActive, setIsActive] = useState(false);
   const scrollRef = useRef(null);
 
-  const scrollLeft=()=>{
-    scrollRef.current.scrollBy({left:-620, behavior:"smooth"})
-    setIsActive(false)
-  }
+  const scrollLeft = () => {
+    scrollRef.current.scrollBy({ left: -620, behavior: "smooth" });
+    setIsActive(false);
+  };
 
-  const scrollRight = ()=>{
-    scrollRef.current.scrollBy({left:620, behavior:"smooth"})
-    setIsActive(true)
-  }
+  const scrollRight = () => {
+    scrollRef.current.scrollBy({ left: 620, behavior: "smooth" });
+    setIsActive(true);
+  };
 
   return (
-    <div className="w-4/5 mx-auto my-32 relative">
+    <div className="w-4/5 mx-auto mt-28 mb-16 relative">
       {/* TOGGLE ARROW */}
       <div className={"flex justify-end gap-3 mb-10"}>
         {/* LEFT ARROW */}
         <button
           onClick={scrollLeft}
-          className={`bg-slate-300 p-1 rounded-full ${isActive?"opacity-40":"opacity-60"}`}>
+          className={`bg-slate-300 p-1 rounded-full ${
+            isActive ? "opacity-40" : "opacity-60"
+          }`}
+        >
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +47,10 @@ const RestaurantSection = () => {
         {/* RIGHT ARROW */}
         <button
           onClick={scrollRight}
-          className={`bg-slate-300 p-1 rounded-full ${isActive?"opacity-60":"opacity-40"}` }>
+          className={`bg-slate-300 p-1 rounded-full ${
+            isActive ? "opacity-60" : "opacity-40"
+          }`}
+        >
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -63,13 +69,11 @@ const RestaurantSection = () => {
       {/* SERVICE ICON */}
       <div ref={scrollRef} className="overflow-x-scroll hide-scrollbar">
         <div>
-            {/* ROW-1 */}
-          <div
-            className={`flex`}
-          >
+          {/* ROW-1 */}
+          <div className={`flex`}>
             {items1.map((i) => (
-              <a className="">
-                <div className="h-[180px] w-[184px]   ">
+              <a href="">
+                <div className="xl:h-[180px] xl:w-[184px] md:h-28 md:w-32   ">
                   <img
                     src={SERVICE_BASE_URL + i + ".png"}
                     className="w-full h-full"
@@ -79,11 +83,11 @@ const RestaurantSection = () => {
             ))}
           </div>
 
-             {/* ROW-2 */}
+          {/* ROW-2 */}
           <div className="flex ">
             {items2.map((i) => (
-              <a className="">
-                <div className="h-[180px] w-[184px]  ">
+              <a href="">
+                <div className="xl:h-[180px] xl:w-[184px] md:h-28 md:w-32 ">
                   <img
                     src={SERVICE_BASE_URL + i + ".png"}
                     className="w-full h-full"

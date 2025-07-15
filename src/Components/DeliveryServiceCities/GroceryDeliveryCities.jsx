@@ -23,7 +23,7 @@ const GroceryDeliveryCities = () => {
     };
 
   return (
-    <div className="w-3/4 mx-auto my-32 ">
+    <div className="xl:w-2/3 lg:w-3/4 md:w-2/3 mx-auto my-16 ">
       {/*HEADING */}
       <div className="font-bold text-2xl mb-10">Cities with food delivery</div>
 
@@ -32,13 +32,13 @@ const GroceryDeliveryCities = () => {
         {isActive ? (
           <>
             {cities.map((i) => (
-              <button className="flex items-center justify-center w-[17rem]  py-4 rounded-xl border border-gray-500 shadow-md">
+              <button className="flex items-center justify-center w-[15rem]  py-4 rounded-xl border border-gray-500 shadow-md">
                 Order food online in {i.text}
               </button>
             ))}
             <button
               onClick={handleShowMore}
-              className="flex items-center justify-center w-[17rem]  py-4 rounded-xl border border-gray-500 shadow-md text-orange-500 font-bold"
+              className="flex items-center justify-center w-[15rem]  py-4 rounded-xl border border-gray-500 shadow-md text-orange-500 font-bold"
             >
               Show Less
             </button>
@@ -46,13 +46,13 @@ const GroceryDeliveryCities = () => {
         ) : (
           <>
             {cities.slice(0, 11).map((i) => (
-              <button className="flex items-center justify-center w-[17rem]  py-4 rounded-xl border border-gray-500 shadow-md">
+              <button className="flex items-center justify-center w-[15rem]  py-4 rounded-xl border border-gray-500 shadow-md">
                 Order food online in {i.text}
               </button>
             ))}
             <button
               onClick={handleShowMore}
-              className="flex items-center justify-center w-[17rem]  py-4 rounded-xl border border-gray-500 shadow-md text-orange-500 font-bold"
+              className="flex items-center justify-center w-[15rem]  py-4 rounded-xl border border-gray-500 shadow-md text-orange-500 font-bold"
             >
               Show More
             </button>

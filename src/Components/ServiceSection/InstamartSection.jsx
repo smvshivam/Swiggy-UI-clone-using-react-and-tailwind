@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Items_Image } from "../../assets/ServiceSection/InstamartSection";
 
 const InstamartSection = () => {
@@ -7,14 +7,14 @@ const InstamartSection = () => {
   const scrollRef = useRef(null);
 
   const scrollLeft = () => {
-    scrollRef.current.scrollBy({ left: -460, behavior: "smooth" }); 
-    console.log("vlaue",scrollRef.current)
+    scrollRef.current.scrollBy({ left: -460, behavior: "smooth" });
+    console.log("vlaue", scrollRef.current);
     setIsActive(false);
   };
 
   const scrollRight = () => {
     scrollRef.current.scrollBy({ left: 460, behavior: "smooth" });
-    console.log("vlaue",scrollRef.current)
+    console.log("vlaue", scrollRef.current);
     setIsActive(true);
   };
 
@@ -72,23 +72,19 @@ const InstamartSection = () => {
       </div>
 
       {/* SERVICES */}
-      <div
-        ref={scrollRef}
-        className="overflow-x-scroll hide-scrollbar"
-      >
-          <div className="flex">
-            {Items_Image.map((i) => (
-              <div className="mr-10">
-                <button className="h-[160px] w-36">
-                  <img src={i.img} />
-                </button>
-                <h5 className="text-center text-xl font-bold text-black-soft">
-                  {i.name}
-                </h5>
-              </div>
-            ))}
-          </div>
-        
+      <div ref={scrollRef} className="overflow-x-scroll hide-scrollbar">
+        <div className="flex">
+          {Items_Image.map((i) => (
+            <div className="mr-10">
+              <button className="xl:h-40 xl:w-36 md:h-28 md:w-24">
+                <img src={i.img} />
+              </button>
+              <h5 className="text-center text-xl font-bold text-black-soft">
+                {i.name}
+              </h5>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

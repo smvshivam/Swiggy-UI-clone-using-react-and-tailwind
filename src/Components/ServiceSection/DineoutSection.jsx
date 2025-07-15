@@ -1,22 +1,23 @@
-import React, { useRef, useState } from "react";
-import { BOOKED_ICON, Dineout_Image, DISCOUNT_ICON } from "../../assets/ServiceSection/DineoutSection";
-
+import { useRef, useState } from "react";
+import {
+  BOOKED_ICON,
+  Dineout_Image,
+  DISCOUNT_ICON,
+} from "../../assets/ServiceSection/DineoutSection";
 
 const DineoutSection = () => {
   const [isActive, setIsActive] = useState(false);
-  const scrollRef = useRef(null)
+  const scrollRef = useRef(null);
 
+  const scrollLeft = () => {
+    setIsActive(false);
+    scrollRef.current.scrollBy({ left: -2400, behavior: "smooth" });
+  };
 
-
-  const scrollLeft = ()=>{
-    setIsActive(false)
-    scrollRef.current.scrollBy({left:-2400, behavior: "smooth"})
-  }
-
-  const scrollRight = ()=>{
-    setIsActive(true)
-    scrollRef.current.scrollBy({left:2400, behavior: "smooth"})
-  }
+  const scrollRight = () => {
+    setIsActive(true);
+    scrollRef.current.scrollBy({ left: 2400, behavior: "smooth" });
+  };
 
   return (
     <div className="w-4/5 mx-auto  my-32">
@@ -78,7 +79,7 @@ const DineoutSection = () => {
         <div className="flex gap-4 ">
           {Dineout_Image.map((i) => (
             <div className="min-w-[328px] shadow-xl rounded-3xl">
-              <a>
+              <a href="">
                 {/* IMAGE */}
                 <div
                   className="flex items-end h-[189px]   bg-cover rounded-t-3xl"
@@ -130,8 +131,8 @@ const DineoutSection = () => {
                 </div>
 
                 {/* DETAILS */}
-                
-                    <div className="w-full mx-2 my-3 pr-4">
+
+                <div className="w-full mx-2 my-3 pr-4">
                   {/* LOCATION AND DISHES */}
                   <div>
                     {/* DISHES AND PRICE */}
@@ -143,14 +144,10 @@ const DineoutSection = () => {
                     </div>
                     {/* LOCATION AND DISTANCE */}
                     <div className="flex justify-between">
-                        {/* LOCATION */}
-                        <div>
-                            {i.location}
-                        </div>
-                        {/* DISTANCE */}
-                        <div>
-                            {i.distance}km
-                        </div>
+                      {/* LOCATION */}
+                      <div>{i.location}</div>
+                      {/* DISTANCE */}
+                      <div>{i.distance}km</div>
                     </div>
                   </div>
 
@@ -159,7 +156,7 @@ const DineoutSection = () => {
                     {/* TABLE BOOKING */}
                     <div className="flex items-center gap-1 bg-slate-200 rounded-3xl pl-2   mr-[11rem] my-3">
                       <div>
-                        <img src={BOOKED_ICON} className="h-4 w-4"/>
+                        <img src={BOOKED_ICON} className="h-4 w-4" />
                       </div>
                       <p>Table booking</p>
                     </div>
@@ -167,22 +164,19 @@ const DineoutSection = () => {
                     {/* DISCOUNT */}
                     <div className="bg-green-600 flex justify-between p-2  rounded-xl">
                       <div className="flex items-center gap-1">
-                        <img src={DISCOUNT_ICON} className="h-6 w-7 "/>
+                        <img src={DISCOUNT_ICON} className="h-6 w-7 " />
                         <div className="text-white">
-                            Flat {i.discount}% off on pre-booking
+                          Flat {i.discount}% off on pre-booking
                         </div>
                       </div>
-                      <div className="text-white">
-                        +1more
-                      </div>
+                      <div className="text-white">+1more</div>
                     </div>
 
                     {/* OFFERS */}
                     <div className="bg-green-300 p-2 my-3 rounded-xl text-green-800">
-                        Up to 10% off with bank offers
+                      Up to 10% off with bank offers
                     </div>
                   </div>
-                
                 </div>
               </a>
             </div>

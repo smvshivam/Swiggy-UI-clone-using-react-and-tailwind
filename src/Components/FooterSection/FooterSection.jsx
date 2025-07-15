@@ -1,5 +1,10 @@
-import React, { useState } from "react";
-import { APP_STORE_IMG, FOOTER_IMG, LOGO, PLAY_STORE_IMG } from "../../assets/FooterSection/FooterSection";
+import { useState } from "react";
+import {
+  APP_STORE_IMG,
+  FOOTER_IMG,
+  LOGO,
+  PLAY_STORE_IMG,
+} from "../../assets/FooterSection/FooterSection";
 
 const FooterSection = () => {
   const [isClick, setIsClick] = useState(false);
@@ -29,27 +34,29 @@ const FooterSection = () => {
   ];
 
   return (
-    <div className="bg-gray-300 bg-opacity-70">
-      <div className="w-3/4 mx-auto pt-10 flex justify-between ">
+    <div className="bg-gray-300 bg-opacity-70 ">
+      <div className="xl:w-2/3 lg:w-4/5 mx-auto pt-10 lg:px-0 md:px-10 flex justify-between ">
         {/* LOGO */}
         <div>
-          <div className="h-12 w-40 ">
+          <div className="xl:h-12 xl:w-40 md:h-8 md:w-28 ">
             <img src={LOGO} />
           </div>
-          <div className="font-semibold text-base tracking-tight text-gray-600">
+          <div className="font-semibold xl:text-base md:text-xs tracking-tight text-gray-600">
             © 2025 Swiggy Limited
           </div>
         </div>
 
         {/* lINKS */}
-        <div className="flex gap-20">
+        <div className="flex xl:gap-10 lg:gap-6 md:gap-4">
           {/* COL1 */}
           <div>
             <h1 className="font-bold text-lg">Company</h1>
             <ul className="">
               {companyLinks.map((i) => (
                 <a href="">
-                  <li className="my-2 font-medium  text-gray-600">{i}</li>
+                  <li className="my-2 font-medium xl:text-base md:text-xs  text-gray-600">
+                    {i}
+                  </li>
                 </a>
               ))}
             </ul>
@@ -61,17 +68,17 @@ const FooterSection = () => {
               <h1 className="font-bold text-lg">Contact us</h1>
               <ul>
                 <a href="">
-                  <li className="my-2 font-medium  text-gray-600">
+                  <li className="my-2 font-medium xl:text-base md:text-xs  text-gray-600">
                     Help & Support
                   </li>
                 </a>
                 <a href="">
-                  <li className="my-2 font-medium  text-gray-600">
+                  <li className="my-2 font-medium xl:text-base md:text-xs text-gray-600">
                     Partner with us
                   </li>
                 </a>
                 <a href="">
-                  <li className="my-2 font-medium  text-gray-600">
+                  <li className="my-2 font-medium xl:text-base md:text-xs  text-gray-600">
                     Ride with us
                   </li>
                 </a>
@@ -82,17 +89,17 @@ const FooterSection = () => {
               <h1 className="font-bold text-lg">Legal</h1>
               <ul>
                 <a href="">
-                  <li className="my-2 font-medium  text-gray-600">
+                  <li className="my-2 font-medium xl:text-base md:text-xs  text-gray-600">
                     Terms & Conditions
                   </li>
                 </a>
                 <a href="">
-                  <li className="my-2 font-medium  text-gray-600">
+                  <li className="my-2 font-medium xl:text-base md:text-xs  text-gray-600">
                     Cookie Policy
                   </li>
                 </a>
                 <a href="">
-                  <li className="my-2 font-medium  text-gray-600">
+                  <li className="my-2 font-medium xl:text-base md:text-xs  text-gray-600">
                     Privacy Policy
                   </li>
                 </a>
@@ -105,7 +112,9 @@ const FooterSection = () => {
             <ul>
               {cities.map((i) => (
                 <a href="">
-                  <li className="my-2 font-medium  text-gray-600">{i}</li>
+                  <li className="my-2 font-medium xl:text-base md:text-xs  text-gray-600">
+                    {i}
+                  </li>
                 </a>
               ))}
             </ul>
@@ -144,18 +153,18 @@ const FooterSection = () => {
               <h1 className="font-bold text-lg">Life at Swiggy</h1>
 
               <ul>
-                <a>
-                  <li className="my-2 font-medium  text-gray-600">
+                <a href="">
+                  <li className="my-2 font-medium xl:text-base md:text-xs text-gray-600">
                     Explore with Swiggy
                   </li>
                 </a>
-                <a>
-                  <li className="my-2 font-medium  text-gray-600">
+                <a href="">
+                  <li className="my-2 font-medium xl:text-base md:text-xs  text-gray-600">
                     Swiggy News
                   </li>
                 </a>
-                <a>
-                  <li className="my-2 font-medium  text-gray-600">
+                <a href="">
+                  <li className="my-2 font-medium xl:text-base md:text-xs text-gray-600">
                     Snackables
                   </li>
                 </a>
@@ -164,9 +173,9 @@ const FooterSection = () => {
             {/* SOCIAL LINKS */}
             <div className="my-10">
               <h1 className="font-bold text-lg">Social Links</h1>
-              <ul className="flex gap-2">
+              <ul className="flex justify-start items-center gap-3">
                 {FOOTER_IMG.map((i) => (
-                  <a>
+                  <a href="">
                     <img src={i} />
                   </a>
                 ))}
@@ -179,18 +188,19 @@ const FooterSection = () => {
 
       <div className="w-[90%] mx-auto my-10  border-t border-gray-700"></div>
 
-      <div className="w-3/4 mx-auto pb-10 px-6 flex justify-between items-center ">
-            <h1 className="font-bold text-2xl text-gray-700">For better experience, download the Swiggy app now</h1>
-            <div className="flex gap-8">
-                <button>
-                    <img src={APP_STORE_IMG} />
-                </button>
+      <div className="xl:w-2/3 md:w-4/5 mx-auto pb-10   flex justify-between gap-4  items-center ">
+        <h1 className="lg:w-full md:w-4/5 font-bold xl:text-2xl md:text-base  text-gray-700 ">
+          For better experience, download the Swiggy app now
+        </h1>
+        <div className="flex gap-3">
+          <button>
+            <img src={APP_STORE_IMG} className="lg:w-80 md:w-24 hover:scale-105 duration-500" />
+          </button>
 
-                <button>
-                    <img src={PLAY_STORE_IMG} />
-                </button>
-                
-            </div>
+          <button>
+            <img src={PLAY_STORE_IMG} className="lg:w-80 md:w-24 hover:scale-105 duration-500" />
+          </button>
+        </div>
       </div>
     </div>
   );
