@@ -2,7 +2,7 @@ export const LEFT_SIDE_PICTURE = "https://media-assets.swiggy.com/swiggy/image/u
 
 export const RIGHT_SIDE_PICTURE = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/testing/seo-home/Sushi_replace.png"
 
-
+export const DELIVERY_BOY ="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/6/19/ca322ced-2d4f-4a43-a8c6-b7e07de76bfa_DEmweb.png"
 
 const IMAGES_URL ="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/23/" 
 

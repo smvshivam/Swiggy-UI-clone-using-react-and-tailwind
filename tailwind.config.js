@@ -15,6 +15,9 @@ export default {
       colors:{
         'saffron':'#FF5200',
         'black-soft': 'rgba(2, 6, 12, 0.6)',
+      },
+      screens: {
+        'xs': '320px', // Custom screen
       }
     },
   },

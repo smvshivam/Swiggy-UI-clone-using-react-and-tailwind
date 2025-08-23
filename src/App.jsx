@@ -11,16 +11,16 @@ import RestaurantSection from "./Components/ServiceSection/RestaurantSection";
 const App = () => {
 
   return (
-    <div>
+    <div className="" >
         <NavigationSection />
         <HeroSection/>
-        <RestaurantSection/>
+        {/* <RestaurantSection/>
         <InstamartSection/>
         <DineoutSection/>
         <BannerSection/>
         <FoodDeliveryCities/>
         <GroceryDeliveryCities/>
-        <FooterSection/>
+        <FooterSection/> */}
     </div>
   );
 };
