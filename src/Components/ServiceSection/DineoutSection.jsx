@@ -20,16 +20,16 @@ const DineoutSection = () => {
   };
 
   return (
-    <div className="w-4/5 mx-auto  my-32">
+    <div className="lg:w-4/5 sm:w-11/12 w-[95%] mx-auto sm:my-32 my-14">
       {/* HEADING + BUTTON */}
       <div className="flex justify-between mb-10">
         {/* HEADING */}
-        <div className="font-bold text-2xl">
+        <div className="font-bold sm:text-2xl text-base">
           Discover best restaurants on Dineout
         </div>
 
         {/* BUTTON */}
-        <div className="flex gap-3">
+        <div className="sm:flex gap-3 hidden">
           {/* LEFT BUTTON */}
           <button
             onClick={scrollLeft}
@@ -78,7 +78,7 @@ const DineoutSection = () => {
       <div ref={scrollRef} className="overflow-scroll hide-scrollbar">
         <div className="flex gap-4 ">
           {Dineout_Image.map((i) => (
-            <div className="min-w-[328px] shadow-xl rounded-3xl">
+            <div className="sm:min-w-[328px] shadow-xl rounded-3xl">
               <a href="">
                 {/* IMAGE */}
                 <div
@@ -154,26 +154,26 @@ const DineoutSection = () => {
                   {/* OTHER DETAILS */}
                   <div>
                     {/* TABLE BOOKING */}
-                    <div className="flex items-center gap-1 bg-slate-200 rounded-3xl pl-2   mr-[11rem] my-3">
+                    <div className="flex items-center whitespace-nowrap gap-1 bg-slate-200 rounded-3xl p-2 sm:mr-44 mr-36 my-3">
                       <div>
-                        <img src={BOOKED_ICON} className="h-4 w-4" />
+                        <img src={BOOKED_ICON} className="sm:h-4 sm:w-4 " />
                       </div>
-                      <p>Table booking</p>
+                      <p className="sm:text-base text-xs">Table booking</p>
                     </div>
 
                     {/* DISCOUNT */}
-                    <div className="bg-green-600 flex justify-between p-2  rounded-xl">
+                    <div className="bg-green-600 flex items-center justify-between p-2  rounded-xl">
                       <div className="flex items-center gap-1">
                         <img src={DISCOUNT_ICON} className="h-6 w-7 " />
-                        <div className="text-white">
+                        <div className="text-white sm:text-base text-xs">
                           Flat {i.discount}% off on pre-booking
                         </div>
                       </div>
-                      <div className="text-white">+1more</div>
+                      <div className="text-white sm:text-base text-xs">+1more</div>
                     </div>
 
                     {/* OFFERS */}
-                    <div className="bg-green-300 p-2 my-3 rounded-xl text-green-800">
+                    <div className="bg-green-300 p-2 my-3 rounded-xl sm:text-base text-xs text-green-800">
                       Up to 10% off with bank offers
                     </div>
                   </div>

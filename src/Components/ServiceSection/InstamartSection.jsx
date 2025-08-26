@@ -23,7 +23,7 @@ const InstamartSection = () => {
       {/* HEADING + BUTTON */}
       <div className="flex justify-between mb-10">
         {/* HEADING */}
-        <div className="font-bold sm:text-2xl text-sm">Shop groceries on Instamart</div>
+        <div className="font-bold sm:text-2xl text-base">Shop groceries on Instamart</div>
 
         {/* BUTTON */}
         <div className="sm:flex gap-3 hidden">
@@ -79,7 +79,7 @@ const InstamartSection = () => {
               <button className="xl:h-40 xl:w-36 h-28 w-24">
                 <img src={i.img} />
               </button>
-              <h5 className="text-center sm:text-xl font-bold text-black-soft">
+              <h5 className="text-center sm:text-xl sm:font-bold text-black-soft">
                 {i.name}
               </h5>
             </div>

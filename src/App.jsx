@@ -16,8 +16,8 @@ const App = () => {
         <HeroSection/>
         <RestaurantSection/>
         <InstamartSection/>
-        {/* <DineoutSection/>
-        <BannerSection/>
+        <DineoutSection/>
+        {/* <BannerSection/>
         <FoodDeliveryCities/>
         <GroceryDeliveryCities/>
         <FooterSection/> */}
