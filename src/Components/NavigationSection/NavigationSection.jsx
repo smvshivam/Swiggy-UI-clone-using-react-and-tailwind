@@ -4,7 +4,7 @@ const NavigationSection = () => {
   return (
     <nav className="bg-saffron">
       {/* LARGE SCREEN */}
-      <div className="lg:w-[80%] w-[90%] mx-auto py-8 md:flex hidden justify-between items-center">
+      <div className="lg:w-4/5 w-11/12 mx-auto py-8 md:flex hidden justify-between items-center">
         {/* LEFT SIDE */}
         <a href="#" className=" w-40">
           <img src={LOGO} />
@@ -32,7 +32,7 @@ const NavigationSection = () => {
       </div>
 
       {/* SMALL SCREEN */}
-      <div className="md:hidden w-[90%] mx-auto py-6 flex justify-between items-center">
+      <div className="md:hidden w-11/12 mx-auto pb-6 flex justify-between items-center">
         {/* RIGHT SIDE */}
         <button className="flex items-center gap-1">
           <div>

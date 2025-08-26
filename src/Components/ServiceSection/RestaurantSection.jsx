@@ -20,7 +20,7 @@ const RestaurantSection = () => {
   };
 
   return (
-    <div className="w-4/5 mx-auto mt-28 mb-16 relative">
+    <div className="lg:w-4/5 sm:w-11/12 w-full  mx-auto sm:my-32  relative ">
       {/* TOGGLE ARROW */}
       <div className={"flex justify-end gap-3 mb-10"}>
         {/* LEFT ARROW */}
@@ -28,7 +28,7 @@ const RestaurantSection = () => {
           onClick={scrollLeft}
           className={`bg-slate-300 p-1 rounded-full ${
             isActive ? "opacity-40" : "opacity-60"
-          }`}
+          } sm:block hidden`}
         >
           <div>
             <svg
@@ -48,8 +48,8 @@ const RestaurantSection = () => {
         <button
           onClick={scrollRight}
           className={`bg-slate-300 p-1 rounded-full ${
-            isActive ? "opacity-60" : "opacity-40"
-          }`}
+            isActive ? "opacity-60" : "opacity-40 "
+          } sm:block hidden`}
         >
           <div>
             <svg
@@ -73,7 +73,7 @@ const RestaurantSection = () => {
           <div className={`flex`}>
             {items1.map((i) => (
               <a href="">
-                <div className="xl:h-[180px] xl:w-[184px] md:h-28 md:w-32   ">
+                <div className="xl:h-[180px] xl:w-[184px] sm:h-28 sm:w-32 h-full w-full  ">
                   <img
                     src={SERVICE_BASE_URL + i + ".png"}
                     className="w-full h-full"
@@ -87,7 +87,7 @@ const RestaurantSection = () => {
           <div className="flex ">
             {items2.map((i) => (
               <a href="">
-                <div className="xl:h-[180px] xl:w-[184px] md:h-28 md:w-32 ">
+                <div className="xl:h-[180px] xl:w-[184px] sm:h-28 sm:w-32 h-full w-full ">
                   <img
                     src={SERVICE_BASE_URL + i + ".png"}
                     className="w-full h-full"

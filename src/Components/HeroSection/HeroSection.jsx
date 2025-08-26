@@ -9,7 +9,7 @@ const HeroSection = () => {
   return (
     <div className="bg-saffron relative ">
       {/* HERO SECTION BODY */}
-      <div className="lg:w-[80%] w-[90%] mx-auto md:pt-16  flex flex-col ">
+      <div className="lg:w-4/5 w-11/12 mx-auto md:pt-16  flex flex-col ">
         {/* LEFT IMAGE */}
         <img
           src={LEFT_SIDE_PICTURE}

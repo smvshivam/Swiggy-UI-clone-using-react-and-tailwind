@@ -15,12 +15,12 @@ const App = () => {
         <NavigationSection />
         <HeroSection/>
         <RestaurantSection/>
-        <InstamartSection/>
+        {/* <InstamartSection/>
         <DineoutSection/>
         <BannerSection/>
         <FoodDeliveryCities/>
         <GroceryDeliveryCities/>
-        <FooterSection/>
+        <FooterSection/> */}
     </div>
   );
 };
