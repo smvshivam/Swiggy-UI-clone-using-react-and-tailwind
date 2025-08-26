@@ -15,16 +15,19 @@ const DINEOUT ="b6d9b7ab-91c7-4f72-9bf2-fcd4ceec3537_DO3BU.png"
 
 export const SERVICE_LINK = [
     {
+        id:1,
         alt:"food",
         service:IMAGES_URL+FOOD_DELIVERY,
         link:"/food"
     },
     {
+        id:2,
         alt:"instamart",
         service:IMAGES_URL+INSTAMART,
         link:"/instamart"
     },
     {
+        id:3,
         alt:"dineout",
         service:IMAGES_URL+DINEOUT,
         link:"/dineout"

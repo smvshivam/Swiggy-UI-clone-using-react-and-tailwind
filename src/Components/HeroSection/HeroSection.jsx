@@ -119,10 +119,10 @@ const HeroSection = () => {
         />
 
         {/* CARDS */}
-        <div className="mx-auto mt-8 overflow-x-scroll flex">
+        <div className="mx-auto mt-8 overflow-x-scroll sm:flex grid  grid-rows-2 grid-cols-2 ">
           {SERVICE_LINK.map((i) => (
-            <a href="">
-              <img src={i.service} />
+            <a href="" key={i.id} className={i.id==1?"col-span-2 row-span-2":""}>
+              <img src={i.service} className={`w-full h-auto`}/>
             </a>
           ))}
         </div>
