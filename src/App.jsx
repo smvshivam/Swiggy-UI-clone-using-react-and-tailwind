@@ -15,8 +15,8 @@ const App = () => {
         <NavigationSection />
         <HeroSection/>
         <RestaurantSection/>
-        {/* <InstamartSection/>
-        <DineoutSection/>
+        <InstamartSection/>
+        {/* <DineoutSection/>
         <BannerSection/>
         <FoodDeliveryCities/>
         <GroceryDeliveryCities/>

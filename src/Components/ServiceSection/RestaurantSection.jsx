@@ -20,7 +20,7 @@ const RestaurantSection = () => {
   };
 
   return (
-    <div className="lg:w-4/5 sm:w-11/12 w-full  mx-auto sm:my-32  relative ">
+    <div className="lg:w-4/5 sm:w-11/12 w-[95%]  mx-auto sm:my-32  relative ">
       {/* TOGGLE ARROW */}
       <div className={"flex justify-end gap-3 mb-10"}>
         {/* LEFT ARROW */}

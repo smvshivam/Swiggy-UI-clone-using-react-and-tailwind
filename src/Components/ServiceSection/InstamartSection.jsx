@@ -19,14 +19,14 @@ const InstamartSection = () => {
   };
 
   return (
-    <div className="w-4/5 mx-auto my-32">
+    <div className="lg:w-4/5 sm:w-11/12 w-[95%] mx-auto sm:my-32 my-14">
       {/* HEADING + BUTTON */}
       <div className="flex justify-between mb-10">
         {/* HEADING */}
-        <div className="font-bold text-2xl">Shop groceries on Instamart</div>
+        <div className="font-bold sm:text-2xl text-sm">Shop groceries on Instamart</div>
 
         {/* BUTTON */}
-        <div className="flex gap-3">
+        <div className="sm:flex gap-3 hidden">
           {/* LEFT BUTTON */}
           <button
             onClick={scrollLeft}
@@ -75,11 +75,11 @@ const InstamartSection = () => {
       <div ref={scrollRef} className="overflow-x-scroll hide-scrollbar">
         <div className="flex">
           {Items_Image.map((i) => (
-            <div className="mr-10">
-              <button className="xl:h-40 xl:w-36 md:h-28 md:w-24">
+            <div className="sm:mr-10 mr-5">
+              <button className="xl:h-40 xl:w-36 h-28 w-24">
                 <img src={i.img} />
               </button>
-              <h5 className="text-center text-xl font-bold text-black-soft">
+              <h5 className="text-center sm:text-xl font-bold text-black-soft">
                 {i.name}
               </h5>
             </div>
