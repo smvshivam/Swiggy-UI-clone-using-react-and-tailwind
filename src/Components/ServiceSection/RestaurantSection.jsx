@@ -73,7 +73,7 @@ const RestaurantSection = () => {
           <div className={`flex`}>
             {items1.map((i) => (
               <a href="">
-                <div className="xl:h-[180px] xl:w-[184px] h-28 w-32   ">
+                <div className="xl:h-[180px] xl:w-[184px] sm:h-28 sm:w-32 h-20 w-24  ">
                   <img
                     src={SERVICE_BASE_URL + i + ".png"}
                     className="w-full h-full"
@@ -82,12 +82,11 @@ const RestaurantSection = () => {
               </a>
             ))}
           </div>
-
           {/* ROW-2 */}
           <div className="flex ">
             {items2.map((i) => (
               <a href="">
-                <div className="xl:h-[180px] xl:w-[184px] h-24 w-28">
+                <div className="xl:h-[180px] xl:w-[184px] sm:h-28 sm:w-32 h-20 w-24">
                   <img
                     src={SERVICE_BASE_URL + i + ".png"}
                     className="w-full h-full"

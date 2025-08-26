@@ -17,7 +17,7 @@ const HeroSection = () => {
         />
 
         {/* Visible on Small Screen  */}
-        <div className="md:hidden flex items-center justify-between  mt-6 rounded-2xl sm:px-4  sm:py-4 p-2 bg-white">
+        <div className="md:hidden flex items-center justify-between  mt-6 rounded-2xl p-2 bg-white">
           <button className="font-semibold  sm:text-lg text-xs text-black-soft">
             Search for restaurant, item or more
           </button>
@@ -42,7 +42,7 @@ const HeroSection = () => {
         </div>
 
         {/* HEADING  */}
-        <div className=" md:w-3/5 mx-auto font-bold  xl:text-5xl lg:text-4xl md:text-3xl md:block hidden text-white text-center">
+        <div className=" md:w-3/5 mx-auto font-bold xl:text-5xl lg:text-4xl md:text-3xl md:block hidden text-white text-center">
           Order food. Discover best restaurants. Swiggy it!
         </div>
 
